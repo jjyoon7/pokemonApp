@@ -8,6 +8,8 @@ export default function PokemonsContainer() {
     })
 
     return (
-        <p>pokemon is here</p>
+        <div className='container'>
+            {pokemons && pokemons.map(pokemon => <Pokemon key={pokemon.id} props={pokemon}/>)}
+        </div>
     )
 }
