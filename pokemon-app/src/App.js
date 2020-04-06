@@ -1,16 +1,18 @@
 import React from 'react';
 import ApolloClinet from 'apollo-boost'
-
+import { ApolloProvider} from '@apollo/react-hooks'
 
 function App() {
-  const clinet = new ApolloClinet({
+  const client = new ApolloClinet({
     uri: 'https://graphql-pokemon.now.sh/'
   })
 
   return (
-    <div className="App">
-      test
-    </div>
+    <ApolloProvider client={client}>
+        <div className="App">
+          test
+        </div>
+    </ApolloProvider>
   );
 }
 
