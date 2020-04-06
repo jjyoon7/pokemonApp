@@ -1,6 +1,7 @@
 import React from 'react';
 import ApolloClinet from 'apollo-boost'
-import { ApolloProvider} from '@apollo/react-hooks'
+import { ApolloProvider } from '@apollo/react-hooks'
+import PokemonsContainer from './containers/PokemonsContainer'
 
 function App() {
   const client = new ApolloClinet({
@@ -9,9 +10,9 @@ function App() {
 
   return (
     <ApolloProvider client={client}>
-        <div className="App">
-          test
-        </div>
+        <main>
+          <PokemonsContainer/>
+        </main>
     </ApolloProvider>
   );
 }
