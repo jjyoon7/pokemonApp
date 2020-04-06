@@ -9,7 +9,7 @@ export default function PokemonsContainer() {
 
     return (
         <div className='container'>
-            {pokemons && pokemons.map(pokemon => <Pokemon key={pokemon.id} props={pokemon}/>)}
+            {pokemons && pokemons.map(pokemon => <Pokemon key={pokemon.id} pokemon={pokemon}/>)}
         </div>
     )
 }
