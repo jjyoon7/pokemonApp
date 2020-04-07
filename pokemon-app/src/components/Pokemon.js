@@ -1,7 +1,23 @@
 import React from 'react'
 
-export function Pokemon() {
+export function Pokemon({pokemon}) {
     return (
-        <p>this pokemon</p>
+        <div className="pokemon">
+            <div className="pokemon__name">
+                <p>{pokemon.name}</p>
+            </div>
+            <div className="pokemon__meta">
+                <span>{pokemon.maxHP}</span>
+                <span>{pokemon.maxCP}</span>
+            </div>
+            <div className="pokemon__image">
+                <img src={pokemon.image} alt={pokemon.name}/>
+            </div>
+            <div className="pokemon__attacks">
+                {/* {pokemon.attacks.map(attack => {
+                    
+                })} */}
+            </div>
+        </div>
     )
 }
